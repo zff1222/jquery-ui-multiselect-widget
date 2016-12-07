@@ -71,7 +71,9 @@
           }
         },
         input: $.proxy(debounce(this._handler, opts.debounceMS), this),
-        search: $.proxy(this._handler, this)
+        search: $.proxy(this._handler, this),
+        keyup: $.proxy(this._handler, this),
+        click: $.proxy(this._handler, this)
       });
 
       // cache input values for searching
